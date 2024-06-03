@@ -1,4 +1,5 @@
 ﻿using HelloWorld.Teste;
+using System.Globalization;
 using System.Text;
 
 namespace HelloWorld;
@@ -7,28 +8,46 @@ class Program
 {
     static void Main()
     {
-        string texto1 = "Primeira frase.";
-        string texto2 = "Segunda frase.";
+        DateOnly dia = new DateOnly(2023, 12, 1);
 
-        string paragrafo = texto1 + " " + 7 + " " + true + " " + texto2;
+        //string diaEmTexto = dia.ToLongDateString();
+        string diaEmTexto = dia.ToString("dd/MMMM/yyyy", new CultureInfo("pt-BR"));
 
-        string caminho = @"C:\teste"; // string caminho = "C:\\teste";
+        DateTime dia1 = new DateTime(2023, 12, 1, 20, 07, 40);
 
-        string paragrafo2 = $"{texto1} {7} {true} {texto2}";
+        //DateTime hoje = DateTime.Now;
+        //DateTime hoje = DateTime.Today;
+        DateTime hoje = DateTime.UtcNow;
 
-        StringBuilder stringBuilder = new StringBuilder();
+        DateTime novaData = hoje.AddDays(1);
 
-        stringBuilder.Append(paragrafo);
-        stringBuilder.Append(paragrafo2);
-
-        string resultado = stringBuilder.ToString();
-
-        string texto = "O usuário {0} gosta do número {1}.";
-        string resultadoTexto = string.Format(texto, "Pietro", 7);
-
-        Console.WriteLine(resultadoTexto);
-
+        Console.WriteLine(novaData);
     }
+
+    //static void Main()
+    //{
+    //    string texto1 = "Primeira frase.";
+    //    string texto2 = "Segunda frase.";
+
+    //    string paragrafo = texto1 + " " + 7 + " " + true + " " + texto2;
+
+    //    string caminho = @"C:\teste"; // string caminho = "C:\\teste";
+
+    //    string paragrafo2 = $"{texto1} {7} {true} {texto2}";
+
+    //    StringBuilder stringBuilder = new StringBuilder();
+
+    //    stringBuilder.Append(paragrafo);
+    //    stringBuilder.Append(paragrafo2);
+
+    //    string resultado = stringBuilder.ToString();
+
+    //    string texto = "O usuário {0} gosta do número {1}.";
+    //    string resultadoTexto = string.Format(texto, "Pietro", 7);
+
+    //    Console.WriteLine(resultadoTexto);
+
+    //}
 
     //static void Main()
     //{
@@ -54,7 +73,7 @@ class Program
     //    Console.WriteLine(existe);
     //    Console.WriteLine(igual);
     //}
-    
+
     //static void Main()
     //{
     //    bool ativo = false;
