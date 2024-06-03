@@ -1,4 +1,5 @@
 ﻿using HelloWorld.Teste;
+using System.Text;
 
 namespace HelloWorld;
 
@@ -6,28 +7,53 @@ class Program
 {
     static void Main()
     {
-        char letra = 'a';
-        char numero = '1';
-        char caracter = '@';
-        char espaco = ' ';
+        string texto1 = "Primeira frase.";
+        string texto2 = "Segunda frase.";
 
-        string texto = "string teste";
-        char primeiraLetraDoTexto = texto[0];
+        string paragrafo = texto1 + " " + 7 + " " + true + " " + texto2;
 
-        string nome = "          Pietro Bergamaschi           ";
-        string nomeSemEspaco = nome.Trim();
+        string caminho = @"C:\teste"; // string caminho = "C:\\teste";
 
-        bool comecaComLetraP = nomeSemEspaco.StartsWith("P");
-        bool terminaComLetraI = nomeSemEspaco.EndsWith("g");
+        string paragrafo2 = $"{texto1} {7} {true} {texto2}";
 
-        string textoAposReplace = nomeSemEspaco.Replace('e', '7');
+        StringBuilder stringBuilder = new StringBuilder();
 
-        bool existe = texto.Contains("teste");
-        bool igual = texto.Equals("teste");
+        stringBuilder.Append(paragrafo);
+        stringBuilder.Append(paragrafo2);
 
-        Console.WriteLine(existe);
-        Console.WriteLine(igual);
+        string resultado = stringBuilder.ToString();
+
+        string texto = "O usuário {0} gosta do número {1}.";
+        string resultadoTexto = string.Format(texto, "Pietro", 7);
+
+        Console.WriteLine(resultadoTexto);
+
     }
+
+    //static void Main()
+    //{
+    //    char letra = 'a';
+    //    char numero = '1';
+    //    char caracter = '@';
+    //    char espaco = ' ';
+
+    //    string texto = "string teste";
+    //    char primeiraLetraDoTexto = texto[0];
+
+    //    string nome = "          Pietro Bergamaschi           ";
+    //    string nomeSemEspaco = nome.Trim();
+
+    //    bool comecaComLetraP = nomeSemEspaco.StartsWith("P");
+    //    bool terminaComLetraI = nomeSemEspaco.EndsWith("g");
+
+    //    string textoAposReplace = nomeSemEspaco.Replace('e', '7');
+
+    //    bool existe = texto.Contains("teste");
+    //    bool igual = texto.Equals("teste");
+
+    //    Console.WriteLine(existe);
+    //    Console.WriteLine(igual);
+    //}
     
     //static void Main()
     //{
