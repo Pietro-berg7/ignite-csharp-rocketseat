@@ -6,9 +6,34 @@ class Program
 {
     static void Main()
     {
-        bool ativo = false;
-        bool ativo2 = true;
+        char letra = 'a';
+        char numero = '1';
+        char caracter = '@';
+        char espaco = ' ';
+
+        string texto = "string teste";
+        char primeiraLetraDoTexto = texto[0];
+
+        string nome = "          Pietro Bergamaschi           ";
+        string nomeSemEspaco = nome.Trim();
+
+        bool comecaComLetraP = nomeSemEspaco.StartsWith("P");
+        bool terminaComLetraI = nomeSemEspaco.EndsWith("g");
+
+        string textoAposReplace = nomeSemEspaco.Replace('e', '7');
+
+        bool existe = texto.Contains("teste");
+        bool igual = texto.Equals("teste");
+
+        Console.WriteLine(existe);
+        Console.WriteLine(igual);
     }
+    
+    //static void Main()
+    //{
+    //    bool ativo = false;
+    //    bool ativo2 = true;
+    //}
 
     //static void main()
     //{
