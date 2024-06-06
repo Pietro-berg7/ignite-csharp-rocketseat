@@ -2,46 +2,89 @@
 
 class Program
 {
-    enum NivelDeDificuldade
-    {
-        Baixo = 0,
-        Medio = 1,
-        Alto = 2
-    }
-
     static void Main()
     {
-        int? idade = null;
-        int? idade2 = 24;
+        HashSet<int> set = new HashSet<int>();
 
-        bool informouIdade = idade.HasValue;
-        int idadeInformada = idade2.Value;
+        set.Add(1);
+        set.Add(2);
+        set.Add(3);
+        set.Add(3); // Hashset não adiciona pois só pode receber valores únicos
 
-        Console.WriteLine(informouIdade);
-        Console.WriteLine(idadeInformada);
+        Console.WriteLine(set.Count);
 
         /*
-        object minhaVariavel = new Carro();
+        Dictionary<int, string> dicionario = new Dictionary<int, string>();
+
+        dicionario.Add(1, "Hello");
+        dicionario.Add(2, "World");
+        dicionario.Add(7, "Betotle");
+        //dicionario.Add(1, "Erro");
+
+        string value = dicionario[2];
+        bool existe = dicionario.ContainsKey(7);
+
+        Console.WriteLine(existe);
         */
 
         /*
-        string nome = "Pietro Bergamaschi";
-        int meuNumero = 7;
+        List<string> strings = new List<string>();
 
-        var nome2 = "Pietro Bergamaschi";
-        var meuNumero2 = 7;
+        strings.Add("Hello");
+        strings.Add("World");
 
-        var variavel = new Carro();
-        var variavel2 = DateTime.Now;
+        string resultado = string.Join(", ", strings);
+
+        Console.WriteLine(resultado);
         */
 
         /*
-        NivelDeDificuldade nivel = NivelDeDificuldade.Alto;
+        List<int> inteiros = new List<int>();
 
-        int nivelInteiro = (int)nivel;
+        inteiros.Add(1);
+        inteiros.Add(2);
+        inteiros.Add(3);
 
-        Console.WriteLine(nivel);
-        Console.WriteLine(nivelInteiro);
+        //inteiros.Remove(1);
+        //inteiros.RemoveAt(0);
+        //inteiros.Clear();
+
+        int primeiroElemento = inteiros.First();
+        int ultimoElemento = inteiros.Last();
+        int elementoSelecionado = inteiros.ElementAt(1);
+
+        Console.WriteLine(primeiroElemento);
+        Console.WriteLine(ultimoElemento);
+        Console.WriteLine(elementoSelecionado);
+        */
+
+        /*
+        int[] inteiros = new int[10];
+
+        Console.WriteLine(inteiros.Length);
+
+        inteiros[0] = 1;
+        inteiros[1] = 10;
+        inteiros[2] = 7;
+
+        Console.WriteLine(inteiros[0]);
+        Console.WriteLine(inteiros[1]);
+        Console.WriteLine(inteiros[2]);
+
+        int[] inteiros2 = [9, 8, 7];
+
+        Console.WriteLine(inteiros2.Length);
+
+        int[,] inteiros3 = new int[10, 10];
+        int[,,] inteiros4 = new int[10, 10,10];
+
+        inteiros3[0, 0] = 1;
+        inteiros3[0, 3] = 2;
+
+        Console.WriteLine(inteiros3[0, 0]);
+        Console.WriteLine(inteiros3[0, 1]);
+        Console.WriteLine(inteiros3[0, 2]);
+        Console.WriteLine(inteiros3[0, 3]);
         */
     }
 }
