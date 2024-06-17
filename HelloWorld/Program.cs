@@ -2,28 +2,25 @@
 
 class Program
 {
+    enum Cores
+    {
+        Vermelho,
+        Azul,
+        Amarelo
+    }
+
     static void Main()
     {
-        //var carro = new Carro();
+        int numero = 0;
+        double saldo = 100.50;
+        bool ativo = true;
+        string autor = "Pietro";
+        List<int> lista = new List<int> { 1, 7 };
+        Cores cor = Cores.Azul;
 
-        //carro.Modelo = "Lamborghini";
-        //carro.Cor = Cor.Vermelho;
-        //carro.LancadoEm = new DateOnly(2021, 01, 01);
-
-        var carro = new Carro("Lamborghini")
+        if (numero == 0 && (saldo > 100.0 || ativo))
         {
-            LancadoEm = new DateOnly(2021, 01, 01),
-            Cor = Cor.Azul
-        };
-
-
-        carro.NomeDoModelo();
-
-        /*
-        var matematica = new OperacoesMatematicas();
-
-        matematica.Teste(valor1: 2, valor2: 1);
-        matematica.Teste(valor1: 2);
-        */
+            Console.WriteLine("Entrou");
+        }
     }
 }
