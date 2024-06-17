@@ -2,53 +2,44 @@
 
 class Program
 {
-    enum Cores
-    {
-        Vermelho,
-        Azul,
-        Amarelo,
-        Verde,
-        Roxo
-    }
-
     static void Main()
     {
-        Cores cor = Cores.Roxo;
+        var numero = 10;
 
-        switch (cor)
+        do
         {
-            case Cores.Azul:
-                {
-                    Console.WriteLine("Azul");
-                }
-                break;
-            case Cores.Vermelho:
-                {
-                    Console.WriteLine("Vermelho");
-                }
-                break;
-            case Cores.Amarelo:
-                {
-                    Console.WriteLine("Amarelo");
-                }
-                break;
-            default:
-                {
-                    Console.WriteLine("Outra cor");
-                }
-                break;
+            Console.WriteLine("Teste");
+            numero++;
         }
+        while (numero < 10);
 
-        int numero = 7;
+        Console.WriteLine(numero);
 
-        string resultado = numero switch
-        {
-            >= 7 => "Pietro",
-            1 => "Betotle",
-            3 => "Bechote",
-            _ => "Nome desconhecido"
-        };
+        //var numero = 0;
 
-        Console.WriteLine(resultado);
+        //while (numero < 10)
+        //{
+        //    Console.WriteLine("Teste");
+        //    numero++;
+        //}
+
+        //Console.WriteLine("Saiu");
+
+        //var lista = new List<string> { "Pietro", "Betotle", "Bechote" };
+        //var dicionario = new Dictionary<string, string>();
+
+        //dicionario.Add("Nome1", "Pietro");
+        //dicionario.Add("Nome2", "Betotle");
+        //dicionario.Add("Nome3", "Bechote");
+
+        //foreach (var item in dicionario)
+        //{
+        //    Console.WriteLine(item);
+        //}
+
+        //for (int i = 0; i < lista.Count; i++)
+        //{
+        //    Console.WriteLine($"{i + 1}: {lista[i]}");
+        //}
     }
 }
