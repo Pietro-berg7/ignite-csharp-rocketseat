@@ -6,21 +6,49 @@ class Program
     {
         Vermelho,
         Azul,
-        Amarelo
+        Amarelo,
+        Verde,
+        Roxo
     }
 
     static void Main()
     {
-        int numero = 0;
-        double saldo = 100.50;
-        bool ativo = true;
-        string autor = "Pietro";
-        List<int> lista = new List<int> { 1, 7 };
-        Cores cor = Cores.Azul;
+        Cores cor = Cores.Roxo;
 
-        if (numero == 0 && (saldo > 100.0 || ativo))
+        switch (cor)
         {
-            Console.WriteLine("Entrou");
+            case Cores.Azul:
+                {
+                    Console.WriteLine("Azul");
+                }
+                break;
+            case Cores.Vermelho:
+                {
+                    Console.WriteLine("Vermelho");
+                }
+                break;
+            case Cores.Amarelo:
+                {
+                    Console.WriteLine("Amarelo");
+                }
+                break;
+            default:
+                {
+                    Console.WriteLine("Outra cor");
+                }
+                break;
         }
+
+        int numero = 7;
+
+        string resultado = numero switch
+        {
+            >= 7 => "Pietro",
+            1 => "Betotle",
+            3 => "Bechote",
+            _ => "Nome desconhecido"
+        };
+
+        Console.WriteLine(resultado);
     }
 }
