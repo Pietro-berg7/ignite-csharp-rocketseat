@@ -7,6 +7,7 @@ namespace MyFirstApi.Controllers;
 public class UserController: ControllerBase
 {
     [HttpGet]
+    [ProducesResponseType(typeof(Response), StatusCodes.Status200OK)]
     public IActionResult Get()
     {
         var response = new Response
