@@ -7,9 +7,9 @@ namespace MyFirstApi.Controllers;
 public class UserController: ControllerBase
 {
     [HttpGet]
-    [Route("{id}")]
+    //[Route("{id}")]
     [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
-    public IActionResult Get(int id)
+    public IActionResult Get([FromHeader] int id, [FromHeader] string? nickname)
     {
         var response = new User
         {
