@@ -1,5 +1,3 @@
-using MyFirstApi;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,8 +7,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var test = builder.Configuration.GetSection("MyClass").Get<MyClass>();
-var test2 = builder.Configuration.GetValue<int>("MyClass:Number");
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 var app = builder.Build();
 
