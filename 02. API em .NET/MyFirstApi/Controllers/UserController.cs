@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyFirstApi.Communication.Requests;
+using MyFirstApi.Communication.Response;
 
 namespace MyFirstApi.Controllers;
 
@@ -7,9 +9,9 @@ namespace MyFirstApi.Controllers;
 public class UserController: ControllerBase
 {
     [HttpGet]
-    //[Route("{id}")]
+    [Route("{id}")]
     [ProducesResponseType(typeof(User), StatusCodes.Status200OK)]
-    public IActionResult Get([FromHeader] int id, [FromHeader] string? nickname)
+    public IActionResult GetById([FromRoute] int id)
     {
         var response = new User
         {
@@ -19,5 +21,17 @@ public class UserController: ControllerBase
         };
 
         return Ok(response);
+    }
+
+    [HttpPost]
+    public IActionResult Create([FromBody] RequestRegisterUserJson request)
+    {
+        var response = new ResponseRegisterUserJson
+        {
+            Id = 1,
+            Name = request.Name
+        };
+
+        return Created(string.Empty, response);
     }
 }
