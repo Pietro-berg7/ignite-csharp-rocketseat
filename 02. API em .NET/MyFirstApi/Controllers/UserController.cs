@@ -67,7 +67,9 @@ public class UserController: MyFirstApiBaseController
             }
         };
 
-        return Ok(response);
+        var key = GetCustomKey();
+
+        return Ok(key);
     }
 
     [HttpPut("change-password")] 
