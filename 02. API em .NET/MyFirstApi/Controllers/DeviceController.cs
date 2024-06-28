@@ -9,8 +9,8 @@ public class DeviceController: MyFirstApiBaseController
     public IActionResult Get()
     {
         var laptop = new Laptop();
-
-        var model = laptop.GetModel();
+        
+        var model = laptop.GetBrand();
 
         return Ok(model);
     }
