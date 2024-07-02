@@ -2,7 +2,7 @@
 
 namespace Petfolio.Application.UseCases.Pets.GetById;
 
-public class GetPetByIdPetUseCase
+public class GetPetByIdUseCase
 {
     public ResponsePetJson Execute(int id)
     { 
