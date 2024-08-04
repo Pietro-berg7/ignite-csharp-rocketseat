@@ -1,5 +1,4 @@
-﻿using CashFlow.Communication.Enums;
-using CashFlow.Communication.Requests;
+﻿using CashFlow.Communication.Requests;
 using CashFlow.Communication.Responses;
 using CashFlow.Exception.ExceptionsBase;
 
@@ -19,7 +18,6 @@ public class RegisterExpenseUseCase
         var validator = new RegisterExpenseValidator();
 
         var result = validator.Validate(request);
-
 
         if (result.IsValid == false)
         {
