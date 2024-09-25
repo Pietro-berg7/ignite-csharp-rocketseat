@@ -4,7 +4,7 @@ public class ErrorOnValidationException: CashFlowException
 {
     public List<string> Errors { get; set; }
 
-    public ErrorOnValidationException(List<string> errorMessagess)
+    public ErrorOnValidationException(List<string> errorMessagess) : base(string.Empty)
     {
         Errors = errorMessagess;
     }
