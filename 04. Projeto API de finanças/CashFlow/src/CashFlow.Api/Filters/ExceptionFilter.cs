@@ -20,7 +20,7 @@ public class ExceptionFilter: IExceptionFilter
         }
     }
 
-    private void HandleProjectException(ExceptionContext context)
+    private static void HandleProjectException(ExceptionContext context)
     {
         var cashFlowException = context.Exception as CashFlowException;
         var errorResponse = new ResponseErrorJson(cashFlowException!.GetErrors());
